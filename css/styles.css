@@ -1,0 +1,35 @@
+/* GENERALES */
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:400;
+  /*background-color: black;*/
+  color:darkslategray;
+}
+
+input, 
+select,
+button{
+  font-family: 'Montserrat', sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+h1{
+  color:darkcyan;
+}
+
+h2, h3{
+  color:lightseagreen; 
+}
+
+a{
+  color:darkslategray;
+}
+
+button{
+  border:none;
+  background-color: aquamarine;
+}
