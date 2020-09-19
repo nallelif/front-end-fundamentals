@@ -1,35 +1,295 @@
 /* GENERALES */
+*{
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
 
 body{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight:400;
-  /*background-color: black;*/
-  color:darkslategray;
+  color: #424242;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+h2, h3, h4, h5, h6{
+  padding-bottom:1em;
+}
+
+p{
+  padding-bottom:1em;
+}
+
+p + h4{
+  margin-top:2em;
+}
+
+a{
+  text-decoration: none;;
+}
+
+strong{
+  font-weight: 600;
 }
 
 input, 
 select,
-button{
-  font-family: 'Montserrat', sans-serif;
-}
-
-button{
-  cursor: pointer;
-}
-
-h1{
-  color:darkcyan;
-}
-
-h2, h3{
-  color:lightseagreen; 
-}
-
-a{
-  color:darkslategray;
-}
-
-button{
+button,
+textarea{
+  font-family: 'Raleway', sans-serif;
   border:none;
-  background-color: aquamarine;
+  font-weight: 600;
+  font-size: 1em;
+  background-color: #EAEAEA;
+  padding:0.6em;
 }
+
+input:focus, 
+select:focus,
+textarea:focus{
+  outline: 1px solid darkgray;
+}
+
+textarea{
+  resize: vertical;
+  min-height:3.6em;
+}
+
+button{
+  color:white;
+  background-color: #424242;
+  padding:1em 2em;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/* HEADER & FOOTER */
+header,
+footer{
+  background-color: #EAEAEA;
+  padding:1em 2em;
+  width:100%;
+  box-sizing: border-box;
+}
+
+header{
+  position: fixed;
+  top:0;
+  left:0;
+  box-shadow: 1px 1px 15px rgba(0,0,0,0.3);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+nav{
+  margin-left:2em;
+  flex-grow: 1;
+  text-align: right;
+}
+
+nav a{
+  display: inline-block;
+  padding:1em;
+}
+
+footer{
+  text-align: center;
+  font-size: 0.8em;
+  height:10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Helper classes */
+.mobile{
+  display: none;
+} 
+
+/* SECTIONS */
+main{
+  max-width:90%;
+  margin:0 auto;
+}
+
+section{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top:10em;
+}
+
+section.fluid{
+  min-height:90vh;
+}
+
+/* Projects */
+.bucket-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.bucket-list li{
+  box-sizing: border-box;
+  width:25%;
+  text-align: center;
+}
+
+.bucket-list li:last-child{
+  margin:0 0 1em 0;
+}
+
+.bucket-list li a{
+  margin:0.5em;
+  display: block;
+  background-color: lightgray;
+  padding:20%;
+  text-decoration: none;
+  opacity:0.5;
+}
+
+.bucket-list li a:hover{
+  opacity:1;
+}
+
+/* Contact */
+#contact{
+  min-height: 90vh;
+  height:90vh;
+}
+
+form{
+  padding:2em 0;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+form div{
+  display: flex;
+  margin-bottom:1em;
+  align-items: center;
+}
+
+form div label{
+  width:14em;
+  font-weight: 600;
+}
+
+form div input, 
+form div select,
+form div textarea{
+  flex-grow: 1;
+}
+
+form button{
+  width:100%;
+}
+
+/*GRID*/
+.grid{
+  display: grid;
+  background-color: darkslategray;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-auto-flow: dense;
+  color: lightseagreen;
+  text-align: center;
+  margin:auto;
+  width:60vh;
+  height:60vh;
+  gap:1%;
+}
+
+.grid img{
+  width:100%;
+}
+
+.grid .bg{
+  background-color:black;
+}
+
+.grid .sk{
+  background-color: white;
+}
+
+.grid .whole-c{
+  grid-column-end: span 11;
+}
+
+.grid .one-c{
+  grid-column-end: span 1;
+}
+
+.grid .two-c{
+  grid-column-end: span 2;
+}
+
+.grid .three-c{
+  grid-column-end: span 3;
+}
+
+.grid .four-c{
+  grid-column-end: span 4;
+}
+
+.grid .five-c{
+  grid-column-end: span 5;
+}
+
+.grid .seven-c{
+  grid-column-end: span 7;
+}
+
+.grid .nine-c{
+  grid-column-end: span 9;
+}
+
+.grid .two-r{
+  grid-row-end: span 2;
+}
+
+/* QUERIES */
+@media (max-width:520px){
+  .mobile{
+    display:block;
+  }
+  .desktop{
+    display: none;
+  }
+
+  .menu-trigger{
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .bucket-list li{
+    width:100%;
+  }
+
+  section{
+    padding-top:6em;
+  }
+
+  #contact button{
+    width:100%;
+  }
+
+  form div{
+    display: block;
+  }
+
+  form label, form input, form textarea, form select{
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+} 
