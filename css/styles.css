@@ -195,6 +195,11 @@ form button{
 }
 
 /*GRID*/
+.figures{
+  display: flex;
+  justify-content: space-between;
+}
+
 .grid{
   display: grid;
   background-color: darkslategray;
@@ -204,9 +209,9 @@ form button{
   color: lightseagreen;
   text-align: center;
   margin:auto;
-  width:60vh;
-  height:60vh;
-  gap:1%;
+  width:50vh;
+  height:50vh;
+  gap:0.5%;
 }
 
 .grid img{
@@ -217,7 +222,7 @@ form button{
   background-color:black;
 }
 
-.grid .sk{
+.grid .fg{
   background-color: white;
 }
 
@@ -245,20 +250,76 @@ form button{
   grid-column-end: span 5;
 }
 
+.grid .six-c{
+  grid-column-end: span 6;
+}
+
 .grid .seven-c{
   grid-column-end: span 7;
+}
+
+.grid .eight-c{
+  grid-column-end: span 8;
 }
 
 .grid .nine-c{
   grid-column-end: span 9;
 }
 
+.grid .ten-c{
+  grid-column-end: span 10;
+}
+
+.grid .whole-r{
+  grid-row-end: span 12;
+}
+
+.grid .one-r{
+  grid-row-end: span 1;
+}
+
 .grid .two-r{
   grid-row-end: span 2;
 }
 
+.grid .three-r{
+  grid-row-end: span 3;
+}
+
+.grid .four-r{
+  grid-row-end: span 4;
+}
+
+.grid .five-r{
+  grid-row-end: span 5;
+}
+
+.grid .six-r{
+  grid-row-end: span 6;
+}
+
+.grid .seven-r{
+  grid-row-end: span 7;
+}
+
+.grid .eight-r{
+  grid-row-end: span 8;
+}
+
+.grid .nine-r{
+  grid-row-end: span 9;
+}
+
+.grid .ten-r{
+  grid-row-end: span 10;
+}
+
+.grid .eleven-r{
+  grid-row-end: span 11;
+}
+
 /* QUERIES */
-@media (max-width:520px){
+@media (max-width:768px){
   .mobile{
     display:block;
   }
